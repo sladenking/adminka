@@ -217,25 +217,17 @@ License: You must have a valid license purchased only from themeforest(the above
 												<input type="text" class="form-control" id="alias" placeholder=""/>
 											</div>
 											<div class="form-group col-5">
-												<label for="desc">Описание</label>
-												<input type="text" class="form-control" id="desc" placeholder=""/>
-											</div>
-											<div class="col-4 mb-3">
+												<label for="exampleTextarea">Описание</label>
+												<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+											 </div>
+											<div class="col-5 mb-3">
 												<label>Выберите изображения:</label>
 											</div>
-											<div class="form-group col-5">
-												<div class="image-input image-input-empty image-input-outline" id="kt_image_5" style="background-image: url(assets/media/blank-image.png)">
-													<div class="image-input-wrapper"></div>
-													<label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Выбрать изображение">
-													 <i class="fa fa-pen icon-sm text-muted"></i>
-													 <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg"/>
-													 <input type="hidden" name="profile_avatar_remove"/>
-													</label>
-													<span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Удалить изображение">
-													 <i class="ki ki-bold-close icon-xs text-muted"></i>
-													</span>
-													</span>
-												 </div>
+											<div class="form-group input-group col-5">
+												<div class="custom-file">
+													<input type="file" class="custom-file-input" id="inputGroupFile01">
+													<label class="custom-file-label" for="inputGroupFile01">Выберите...</label>
+												</div>
 											</div>
 											<div class="form-group col-5">
 												<label>Рекомендуемые товары:</label>
@@ -325,29 +317,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
 		<!--end::Page Scripts-->
-		<script>
-			var avatar5 = new KTImageInput('kt_image_5');
-
-			avatar5.on('cancel', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно удалено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-
-			avatar5.on('change', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно добавлено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-		</script>
 	</body>
 	<!--end::Body-->
 </html>

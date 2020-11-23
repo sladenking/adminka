@@ -179,7 +179,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--begin::Page Heading-->
 									<div class="d-flex align-items-baseline flex-wrap mr-5">
 										<!--begin::Page Title-->
-										<h5 class="text-dark font-weight-bold my-1 mr-5">Редактировать товар</h5>
+										<h5 class="text-dark font-weight-bold my-1 mr-5">Создать товар</h5>
 										<!--end::Page Title-->
 										<!--begin::Breadcrumb-->
 										<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -209,15 +209,28 @@ License: You must have a valid license purchased only from themeforest(the above
 									<form>
 										<div class="card-body">
 											<div class="form-group col-5">
-												<label>Название Категории</span></label>
-												<input type="email" class="form-control"  placeholder=""/>
+												<label for="name">Название Товара</label>
+												<input type="text" class="form-control" id="name" placeholder=""/>
 											</div>
 											<div class="form-group col-5">
-												<label for="exampleInputPassword1">Alias</span></label>
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder=""/>
+												<label for="alias">Alias</label>
+												<input type="text" class="form-control" id="alias" placeholder=""/>
 											</div>
 											<div class="form-group col-5">
-												<label>Выберите категорию:</label>
+												<label for="exampleTextarea">Описание</label>
+												<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+											 </div>
+											<div class="col-5 mb-3">
+												<label>Выберите изображения:</label>
+											</div>
+											<div class="form-group input-group col-5">
+												<div class="custom-file">
+													<input type="file" class="custom-file-input" id="inputGroupFile01">
+													<label class="custom-file-label" for="inputGroupFile01">Выберите...</label>
+												</div>
+											</div>
+											<div class="form-group col-5">
+												<label>Рекомендуемые товары:</label>
 												<div class="dropdown bootstrap-select form-control dropup">
 													<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
 													<option value="{{ $item->id }}">{{ $item->alias }}</option>
@@ -226,28 +239,31 @@ License: You must have a valid license purchased only from themeforest(the above
 													</select>
 												</div>
 											</div>
-											<div class="col-4 mb-3">
-												<label>Выберите изображение:</label>
+											<div class="form-group col-5">
+												<label for="price">Цена</label>
+												<input type="text" class="form-control" id="price" placeholder=""/>
 											</div>
-											<div class="col-4">
-												<div class="image-input image-input-empty image-input-outline" id="kt_image_5" style="background-image: url(assets/media/blank-image.png)">
-													<div class="image-input-wrapper"></div>
-												 
-													<label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Выбрать изображение">
-													 <i class="fa fa-pen icon-sm text-muted"></i>
-													 <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg"/>
-													 <input type="hidden" name="profile_avatar_remove"/>
-													</label>
-												 
-													<span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Удалить изображение">
-													 <i class="ki ki-bold-close icon-xs text-muted"></i>
-													</span>
-													</span>
-												 </div>
+											<div class="form-group col-5">
+												<label for="sale">Скидочная цена</label>
+												<input type="text" class="form-control" id="sale" placeholder=""/>
+											</div>
+											<div class="form-group col-5">
+												<label for="ceo-title">CEO название</label>
+												<input type="text" class="form-control" id="ceo-title" placeholder=""/>
+											</div>
+											<div class="form-group col-5">
+												<label>Характеристики:</label>
+												<div class="dropdown bootstrap-select form-control dropup">
+													<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+													<option value="{{ $item->id }}">{{ $item->alias }}</option>
+													<option value="{{ $item->id }}">{{ $item->alias }}</option>
+													<option value="{{ $item->id }}">{{ $item->alias }}</option>
+													</select>
+												</div>
 											</div>
 										</div>
 										<div class="card-footer">
-										<button type="reset" class="btn btn-primary mr-2">Сохранить</button>
+										<button type="reset" class="btn btn-primary mr-2">Создать</button>
 										</div>
 									</form>
 								</div>
@@ -300,30 +316,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
-        <!--end::Page Scripts-->
-        <script>
-			var avatar5 = new KTImageInput('kt_image_5');
-
-			avatar5.on('cancel', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно удалено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-
-			avatar5.on('change', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно добавлено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-		</script>
+		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
 </html>
