@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../">
 		<meta charset="utf-8" />
-		<title>Категории</title>
+		<title>Товары</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
@@ -96,14 +96,14 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text">Главная</span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-submenu menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link">
 										<i class="menu-icon fas fa-sitemap"></i>
 										<span class="menu-text">Категории</span>
 										<i class="menu-arrow"></i>
 									</a>
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link">
 										<i class="menu-icon flaticon-web"></i>
 										<span class="menu-text">Товары</span>
@@ -175,11 +175,11 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="subheader py-2 py-lg-6 subheader-solid" id="kt_subheader">
 							<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 								<!--begin::Info-->
-								<div class="d-flex align-items-center flex-wrap mr-1">
+								<div class="d-flex align-items-centerflex-wrap mr-1">
 									<!--begin::Page Heading-->
 									<div class="d-flex align-items-baseline flex-wrap mr-5">
 										<!--begin::Page Title-->
-										<h5 class="text-dark font-weight-bold my-1 mr-5">Редактировать категорию</h5>
+										<h5 class="text-dark font-weight-bold my-1 mr-5">Товары</h5>
 										<!--end::Page Title-->
 										<!--begin::Breadcrumb-->
 										<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -187,7 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<a href="" class="text-muted">Главная</a>
 											</li>
 											<li class="breadcrumb-item">
-												<a href="" class="text-muted">Категории</a>
+												<a href="" class="text-muted">Товары</a>
 											</li>
 										</ul>
 										<!--end::Breadcrumb-->
@@ -195,8 +195,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--end::Page Heading-->
 								</div>
 								<!--end::Info-->
-								<button type="button" class="btn btn-secondary btn-sm">
-									<i class="flaticon2-delete" style="padding-right: 0;"></i>
+								<button type="button" class="btn btn-success btn-sm">
+									<i class="flaticon2-add-1" style="padding-right: 0;"></i>
 								</button>
 							</div>
 						</div>
@@ -205,52 +205,142 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="d-flex flex-column-fluid">
 							<!--begin::Container-->
 							<div class="container">
-								<div class="card card-custom">
-									<form>
-										<div class="card-body">
-											<div class="form-group col-5">
-												<label for="name">Название Товара</label>
-												<input type="text" class="form-control" id="name" placeholder=""/>
-											</div>
-											<div class="form-group col-5">
-												<label for="alias">Alias</label>
-												<input type="text" class="form-control" id="alias" placeholder=""/>
-											</div>
-											<div class="form-group col-5">
-												<label>Выберите категорию:</label>
-												<div class="dropdown bootstrap-select form-control dropup">
-													<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													</select>
+								<div class="card card-custom gutter-b">
+									<div class="card-body">
+										<!--begin: Datatable-->
+										<div class="datatable datatable-bordered datatable-head-custom datatable-default datatable-primary datatable-loaded" id="kt_datatable">
+											<table class="datatable-table" style="display: block;">
+												<thead class="datatable-head">
+													<tr class="datatable-row" style="left: 0px;">
+														<th class="datatable-cell-left datatable-cell datatable-cell-sort datatable-cell-sorted" data-sort="asc"><span style="width: 40px;">#<i class="flaticon2-arrow-up"></i></span></th>
+														<th class="datatable-cell datatable-cell-sort"><span style="width: 250px;">Название</span></th>
+														<th class="datatable-cell datatable-cell-sort"><span style="width: 130px;">Действие</span></th>
+													</tr>
+												</thead>
+												<tbody class="datatable-body">
+													<tr class="datatable-row datatable-row-hover" style="left: 0px;">
+														<td class="datatable-cell-sorted datatable-cell-left datatable-cell" ><span style="width: 40px;"><span class="font-weight-bolder">1</span></span></td>
+														<td class="datatable-cell"><span style="width: 250px;"><div class="d-flex align-items-center"><div class="text-dark-75 font-weight-bolder font-size-lg mb-0">Название1</div></div></span></td>
+														<td class="datatable-cell">
+															<span style="width: 130px;">
+																<button type="button" class="btn btn-warning btn-sm">
+																	<i class="flaticon-edit" style="padding-right: 0;"></i>
+																</button>
+																<button type="button" class="btn btn-danger btn-sm">
+																	<i class="flaticon-delete-1" style="padding-right: 0;"></i>
+																</button>
+															</span>
+														</td>
+													</tr>
+													<tr class="datatable-row datatable-row-hover" style="left: 0px;">
+														<td class="datatable-cell-sorted datatable-cell-left datatable-cell" ><span style="width: 40px;"><span class="font-weight-bolder">2</span></span></td>
+														<td class="datatable-cell"><span style="width: 250px;"><div class="d-flex align-items-center"><a href="" class="text-dark-75 font-weight-bolder font-size-lg mb-0">Название2 <i class="far fa-caret-square-up"></i></a></div></span></td>
+														<td class="datatable-cell">
+															<span style="width: 130px;">
+																<button type="button" class="btn btn-warning btn-sm">
+																	<i class="flaticon-edit" style="padding-right: 0;"></i>
+																</button>
+																<button type="button" class="btn btn-danger btn-sm">
+																	<i class="flaticon-delete-1" style="padding-right: 0;"></i>
+																</button>
+															</span>
+														</td>
+													</tr>
+													<tr class="datatable-row datatable-row-hover" style="left: 0px;">
+														<td class="datatable-cell-sorted datatable-cell-left datatable-cell" ><span style="width: 40px;"><span class="font-weight-bolder"></span></span></td>
+														<td class="datatable-cell"><span style="width: 250px;"><div class="d-flex align-items-center"><div class="text-dark-75 font-weight-bold font-size-lg mb-0 ml-5">Подназвание</div></div></span></td>
+														<td class="datatable-cell">
+															<span style="width: 130px;">
+																<button type="button" class="btn btn-warning btn-sm">
+																	<i class="flaticon-edit" style="padding-right: 0;"></i>
+																</button>
+																<button type="button" class="btn btn-danger btn-sm">
+																	<i class="flaticon-delete-1" style="padding-right: 0;"></i>
+																</button>
+															</span>
+														</td>
+													</tr>
+													<tr class="datatable-row datatable-row-hover" style="left: 0px;">
+														<td class="datatable-cell-sorted datatable-cell-left datatable-cell"><span style="width: 40px;"><span class="font-weight-bolder">3</span></span></td>
+														<td class="datatable-cell"><span style="width: 250px;"><div class="d-flex align-items-center"><a href="" class="text-dark-75 font-weight-bolder font-size-lg mb-0">Название3 <i class="far fa-caret-square-down"></i></a></div></span></td>
+														<td class="datatable-cell">
+															<span style="width: 130px;">
+																<button type="button" class="btn btn-warning btn-sm">
+																	<i class="flaticon-edit" style="padding-right: 0;"></i>
+																</button>
+																<button type="button" class="btn btn-danger btn-sm">
+																	<i class="flaticon-delete-1" style="padding-right: 0;"></i>
+																</button>
+															</span>
+														</td>
+													</tr>
+													<tr class="datatable-row datatable-row-hover" style="left: 0px;">
+														<td class="datatable-cell-sorted datatable-cell-left datatable-cell"><span style="width: 40px;"><span class="font-weight-bolder">4</span></span></td>
+														<td class="datatable-cell"><span style="width: 250px;"><div class="d-flex align-items-center"><div class="text-dark-75 font-weight-bolder font-size-lg mb-0">Название4</div></div></span></td>
+														<td class="datatable-cell">
+															<span style="width: 130px;">
+																<button type="button" class="btn btn-warning btn-sm">
+																	<i class="flaticon-edit" style="padding-right: 0;"></i>
+																</button>
+																<button type="button" class="btn btn-danger btn-sm">
+																	<i class="flaticon-delete-1" style="padding-right: 0;"></i>
+																</button>
+															</span>
+														</td>
+													</tr>
+													<tr class="datatable-row datatable-row-hover" style="left: 0px;">
+														<td class="datatable-cell-sorted datatable-cell-left datatable-cell"><span style="width: 40px;"><span class="font-weight-bolder">5</span></span></td>
+														<td class="datatable-cell"><span style="width: 250px;"><div class="d-flex align-items-center"><div class="text-dark-75 font-weight-bolder font-size-lg mb-0">Название5</div></div></span></td>
+														<td class="datatable-cell">
+															<span style="width: 130px;">
+																<button type="button" class="btn btn-warning btn-sm">
+																	<i class="flaticon-edit" style="padding-right: 0;"></i>
+																</button>
+																<button type="button" class="btn btn-danger btn-sm">
+																	<i class="flaticon-delete-1" style="padding-right: 0;"></i>
+																</button>
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="datatable-pager datatable-paging-loaded">
+												<ul class="datatable-pager-nav my-2 mb-sm-0">
+													<li><a title="First" class="datatable-pager-link datatable-pager-link-first datatable-pager-link-disabled" data-page="1" disabled="disabled"><i class="flaticon2-fast-back"></i></a></li>
+													<li><a title="Previous" class="datatable-pager-link datatable-pager-link-prev datatable-pager-link-disabled" data-page="1" disabled="disabled"><i class="flaticon2-back"></i></a></li>
+													<li style="display: none;"><input type="text" class="datatable-pager-input form-control" title="Page number"></li>
+													<li><a class="datatable-pager-link datatable-pager-link-number datatable-pager-link-active" data-page="1" title="1">1</a></li>
+													<li><a class="datatable-pager-link datatable-pager-link-number" data-page="2" title="2">2</a></li>
+													<li><a class="datatable-pager-link datatable-pager-link-number" data-page="3" title="3">3</a></li>
+													<li><a class="datatable-pager-link datatable-pager-link-number" data-page="4" title="4">4</a></li>
+													<li><a class="datatable-pager-link datatable-pager-link-number" data-page="5" title="5">5</a></li>
+													<li><a title="Next" class="datatable-pager-link datatable-pager-link-next" data-page="2"><i class="flaticon2-next"></i></a></li>
+													<li><a title="Last" class="datatable-pager-link datatable-pager-link-last" data-page="35"><i class="flaticon2-fast-next"></i></a></li>
+												</ul>
+												<div class="datatable-pager-info my-2 mb-sm-0">
+													<div class="dropdown bootstrap-select datatable-pager-size" style="width: 60px;">
+														<select class="selectpicker datatable-pager-size" title="" data-width="60px" data-container="body" data-selected="10">
+															<option value="5">5</option>
+															<option value="10">10</option>
+															<option value="20">20</option>
+															<option value="30">30</option>
+															<option value="50">50</option>
+															<option value="100">100</option>
+														</select>
+														<div class="dropdown-menu ">
+															<div class="inner show" role="listbox" id="bs-select-1" tabindex="-1">
+																<ul class="dropdown-menu inner show" role="presentation">
+																</ul>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
-											<div class="col-4 mb-3">
-												<label>Выберите изображение:</label>
-											</div>
-											<div class="col-4">
-												<div class="image-input image-input-empty image-input-outline" id="kt_image_5" style="background-image: url(assets/media/blank-image.png)">
-													<div class="image-input-wrapper"></div>
-												 
-													<label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Выбрать изображение">
-													 <i class="fa fa-pen icon-sm text-muted"></i>
-													 <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg"/>
-													 <input type="hidden" name="profile_avatar_remove"/>
-													</label>
-												 
-													<span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Удалить изображение">
-													 <i class="ki ki-bold-close icon-xs text-muted"></i>
-													</span>
-													</span>
-												 </div>
-											</div>
 										</div>
-										<div class="card-footer">
-										<button type="reset" class="btn btn-primary mr-2">Сохранить</button>
-										</div>
-									</form>
+										<!--end: Datatable-->
+									</div>
 								</div>
+								<!--end::Card-->
 							</div>
 							<!--end::Container-->
 						</div>
@@ -300,30 +390,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
-        <!--end::Page Scripts-->
-        <script>
-			var avatar5 = new KTImageInput('kt_image_5');
-
-			avatar5.on('cancel', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно удалено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-
-			avatar5.on('change', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно добавлено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-		</script>
+		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
 </html>
