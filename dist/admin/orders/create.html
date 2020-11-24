@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../">
 		<meta charset="utf-8" />
-		<title>Категории</title>
+		<title>Товары</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
@@ -96,7 +96,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span class="menu-text">Главная</span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-submenu menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link">
 										<i class="menu-icon fas fa-sitemap"></i>
 										<span class="menu-text">Категории</span>
@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<i class="menu-arrow"></i>
 									</a>
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<i class="menu-icon flaticon2-file"></i>
 										<span class="menu-text">Заказы</span>
@@ -179,7 +179,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--begin::Page Heading-->
 									<div class="d-flex align-items-baseline flex-wrap mr-5">
 										<!--begin::Page Title-->
-										<h5 class="text-dark font-weight-bold my-1 mr-5">Редактировать категорию</h5>
+										<h5 class="text-dark font-weight-bold my-1 mr-5">Создать заказ</h5>
 										<!--end::Page Title-->
 										<!--begin::Breadcrumb-->
 										<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -187,7 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<a href="" class="text-muted">Главная</a>
 											</li>
 											<li class="breadcrumb-item">
-												<a href="" class="text-muted">Категории</a>
+												<a href="" class="text-muted">Заказы</a>
 											</li>
 										</ul>
 										<!--end::Breadcrumb-->
@@ -205,52 +205,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="d-flex flex-column-fluid">
 							<!--begin::Container-->
 							<div class="container">
-								<div class="card card-custom">
-									<form>
-										<div class="card-body">
-											<div class="form-group">
-												<label for="name">Название Товара</label>
-												<input type="text" class="form-control" id="name" placeholder=""/>
-											</div>
-											<div class="form-group">
-												<label for="alias">Alias</label>
-												<input type="text" class="form-control" id="alias" placeholder=""/>
-											</div>
-											<div class="form-group">
-												<label>Выберите категорию:</label>
-												<div class="dropdown bootstrap-select form-control dropup">
-													<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													</select>
-												</div>
-											</div>
-											<div class="mb-3">
-												<label>Выберите изображение:</label>
-											</div>
-											<div>
-												<div class="image-input image-input-empty image-input-outline" id="kt_image_5" style="background-image: url(assets/media/blank-image.png)">
-													<div class="image-input-wrapper"></div>
-												 
-													<label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Выбрать изображение">
-													 <i class="fa fa-pen icon-sm text-muted"></i>
-													 <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg"/>
-													 <input type="hidden" name="profile_avatar_remove"/>
-													</label>
-												 
-													<span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Удалить изображение">
-													 <i class="ki ki-bold-close icon-xs text-muted"></i>
-													</span>
-													</span>
-												 </div>
-											</div>
-										</div>
-										<div class="card-footer">
-										<button type="reset" class="btn btn-primary mr-2">Сохранить</button>
-										</div>
-									</form>
-								</div>
+								
 							</div>
 							<!--end::Container-->
 						</div>
@@ -300,30 +255,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
-        <!--end::Page Scripts-->
-        <script>
-			var avatar5 = new KTImageInput('kt_image_5');
-
-			avatar5.on('cancel', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно удалено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-
-			avatar5.on('change', function(imageInput) {
-			swal.fire({
-				title: 'Изображение успешно добавлено!',
-				type: 'success',
-				buttonsStyling: false,
-				confirmButtonText: 'Спасибо!',
-				confirmButtonClass: 'btn btn-primary font-weight-bold'
-			});
-			});
-		</script>
+		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
 </html>
