@@ -206,64 +206,221 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Container-->
 							<div class="container">
 								<div class="card card-custom">
-									<form>
-										<div class="card-body">
-											<div class="form-group">
-												<label for="name">Название Товара</label>
-												<input type="text" class="form-control" id="name" placeholder=""/>
-											</div>
-											<div class="form-group">
-												<label for="alias">Alias</label>
-												<input type="text" class="form-control" id="alias" placeholder=""/>
-											</div>
-											<div class="form-group">
-												<label for="exampleTextarea">Описание</label>
-												<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-											 </div>
-											 <div class="form-group">
-												<label>Выберите изображения:</label>
-												<div class="custom-file">
-													<input type="file" class="custom-file-input" id="inputGroupFile01">
-													<label class="custom-file-label" for="inputGroupFile01">Выберите...</label>
+									<div class="card-body">
+										<ul class="nav nav-tabs nav-tabs-line">
+											<li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_1">Текст</a>
+											</li>
+											<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#kt_tab_pane_2">Изображения</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab" href="#kt_tab_pane_3">Характеристики</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab" href="#kt_tab_pane_4">Автомобиль</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab" href="#kt_tab_pane_5">Связи</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab" href="#kt_tab_pane_6">Для оптовиков</a>
+											</li>
+										</ul>
+										<div class="tab-content mt-5" id="myTabContent">
+											<div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel" aria-labelledby="kt_tab_pane_2">
+												<div class="form-group">
+													<label for="name">Название Товара</label>
+													<input type="text" class="form-control" id="name" placeholder=""/>
+												</div>
+												<div class="form-group">
+													<label for="alias">Артикул</label>
+													<input type="text" class="form-control" id="alias" placeholder=""/>
+												</div>
+												<div class="form-group">
+													<label for="s-desc">Краткое описание</label>
+													<textarea class="form-control" id="s-desc" rows="3"></textarea>
+												</div>
+												<div class="form-group">
+													<label for="desc">Описание</label>
+													<textarea class="form-control" id="desc" rows="3"></textarea>
+												</div>
+												<div class="form-group">
+													<label for="price">Цена</label>
+													<input type="text" class="form-control" id="price" placeholder=""/>
+												</div>
+												<div class="form-group">
+													<label for="sale">Скидочная цена</label>
+													<input type="text" class="form-control" id="sale" placeholder=""/>
+												</div>
+												<div class="form-group">
+													<label for="ceo-title">CEO название</label>
+													<input type="text" class="form-control" id="ceo-title" placeholder=""/>
+												</div>
+												<div class="form-group">
+													<label for="ceo-desc">CEO описание</label>
+													<input type="text" class="form-control" id="ceo-desc" placeholder=""/>
 												</div>
 											</div>
-											<div class="form-group">
-												<label>Рекомендуемые товары:</label>
-												<div class="dropdown bootstrap-select form-control dropup">
-													<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													</select>
+											<div class="tab-pane fade" id="kt_tab_pane_2" role="tabpanel" aria-labelledby="kt_tab_pane_2">
+												<div class="images">
+													<div class="image-input image-input-empty image-input-outline mr-15" id="kt_image_1" style="background-image: url(assets/media/blank-image.png)">
+														<div class="image-input-wrapper"></div>
+													 
+														<label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Выбрать изображение">
+														 <i class="fa fa-pen icon-sm text-muted"></i>
+														 <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg"/>
+														 <input type="hidden" name="profile_avatar_remove"/>
+														</label>
+													 
+														<span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Удалить изображение">
+														 <i class="ki ki-bold-close icon-xs text-muted"></i>
+														</span>
+														</span>
+													</div>
+													<div class="image-input image-input-empty image-input-outline mr-15" id="kt_image_1" style="background-image: url(assets/media/blank-image.png)">
+														<div class="image-input-wrapper"></div>
+													 
+														<label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Выбрать изображение">
+														 <i class="fa fa-pen icon-sm text-muted"></i>
+														 <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg"/>
+														 <input type="hidden" name="profile_avatar_remove"/>
+														</label>
+													 
+														<span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Удалить изображение">
+														 <i class="ki ki-bold-close icon-xs text-muted"></i>
+														</span>
+														</span>
+													</div>
+												</div>
+												<div class="add">
+													<span class="d-flex justify-content-end">
+														<button type="button" class="btn btn-success">
+															<i class="flaticon-add" style="padding-right: 0;"></i>
+														</button>
+													</span>
 												</div>
 											</div>
-											<div class="form-group">
-												<label for="price">Цена</label>
-												<input type="text" class="form-control" id="price" placeholder=""/>
+											<div class="tab-pane fade" id="kt_tab_pane_3" role="tabpanel" aria-labelledby="kt_tab_pane_3">
+												<div class="datatable datatable-bordered datatable-head-custom datatable-default datatable-primary datatable-loaded" id="kt_datatable_1">
+													<table class="datatable-table" style="display: block;">
+														<thead class="datatable-head">
+															<tr class="datatable-row" style="left: 0px;">
+																<th class="datatable-cell datatable-cell-sort" style="width: 380px;"><span>Характеристика</span></th>
+																<th class="datatable-cell datatable-cell-sort" style="width: 380px;"><span>Текст</span></th>
+																<th class="datatable-cell datatable-cell-sort" style="width: 100px;"><span>Действие</span></th>
+															</tr>
+														</thead>
+														<tbody class="datatable-body">
+															<tr class="datatable-row datatable-row-hover" style="left: 0px;">
+																<td class="datatable-cell" style="width: 380px;"><span><div class="d-flex align-items-center justify-content-center">
+																	<input type="text" class="form-control" id="alias" placeholder="Характеристика" style="width: 100%;"/>
+																</div></span></td>
+																<td class="datatable-cell" style="width: 380px;"><span><div class="d-flex align-items-center justify-content-center">
+																	<textarea class="form-control" id="info" rows="3" style="width: 100%;"></textarea>
+																</div></span></td>
+																<td class="datatable-cell" style="width: 100px;">
+																	<span class="d-flex justify-content-center">
+																		<button type="button" class="btn btn-danger btn-sm">
+																			<i class="flaticon-delete-1" style="padding-right: 0;"></i>
+																		</button>
+																	</span>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													<span class="d-flex justify-content-end">
+														<button type="button" class="btn btn-success">
+															<i class="flaticon-add" style="padding-right: 0;"></i>
+														</button>
+													</span>
+												</div>
 											</div>
-											<div class="form-group">
-												<label for="sale">Скидочная цена</label>
-												<input type="text" class="form-control" id="sale" placeholder=""/>
+											<div class="tab-pane fade" id="kt_tab_pane_4" role="tabpanel" aria-labelledby="kt_tab_pane_4">
+												<div class="form-group">
+													<label>Марка:</label>
+													<div class="dropdown bootstrap-select form-control dropup">
+														<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Модель:</label>
+													<div class="dropdown bootstrap-select form-control dropup">
+														<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Тип:</label>
+													<div class="dropdown bootstrap-select form-control dropup">
+														<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														</select>
+													</div>
+												</div>
 											</div>
-											<div class="form-group">
-												<label for="ceo-title">CEO название</label>
-												<input type="text" class="form-control" id="ceo-title" placeholder=""/>
+											<div class="tab-pane fade" id="kt_tab_pane_5" role="tabpanel" aria-labelledby="kt_tab_pane_5">
+												<div class="form-group">
+													<label>Рекомендуемые товары:</label>
+													<div class="dropdown bootstrap-select form-control dropup">
+														<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Связанные товары по группе:</label>
+													<div class="dropdown bootstrap-select form-control dropup">
+														<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Категория:</label>
+													<div class="dropdown bootstrap-select form-control dropup">
+														<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Подкатегория:</label>
+													<div class="dropdown bootstrap-select form-control dropup">
+														<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														<option value="{{ $item->id }}">{{ $item->alias }}</option>
+														</select>
+													</div>
+												</div>
 											</div>
-											<div class="form-group">
-												<label>Характеристики:</label>
-												<div class="dropdown bootstrap-select form-control dropup">
-													<select class="form-control selectpicker" data-size="5" data-live-search="true" tabindex="null" name="r_t_p_id" title="Выберите...">
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													<option value="{{ $item->id }}">{{ $item->alias }}</option>
-													</select>
+											<div class="tab-pane fade" id="kt_tab_pane_6" role="tabpanel" aria-labelledby="kt_tab_pane_6">
+												<div class="form-group">
+													<label for="text">Сообщение</label>
+													<textarea class="form-control" id="text" rows="5"></textarea>
 												</div>
 											</div>
 										</div>
-										<div class="card-footer">
-										<button type="reset" class="btn btn-primary mr-2">Создать</button>
+									</div>
+									<div class="card-footer">
+										<button type="" class="btn btn-primary mr-2">Создать</button>
 										</div>
-									</form>
 								</div>
 							</div>
 							<!--end::Container-->
@@ -315,6 +472,29 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="assets/js/pages/widgets.js"></script>
 		<!--end::Page Scripts-->
+		<script>
+			var avatar5 = new KTImageInput('kt_image_1');
+
+			avatar5.on('cancel', function(imageInput) {
+			swal.fire({
+				title: 'Изображение успешно удалено!',
+				type: 'success',
+				buttonsStyling: false,
+				confirmButtonText: 'Спасибо!',
+				confirmButtonClass: 'btn btn-primary font-weight-bold'
+			});
+			});
+
+			avatar5.on('change', function(imageInput) {
+			swal.fire({
+				title: 'Изображение успешно добавлено!',
+				type: 'success',
+				buttonsStyling: false,
+				confirmButtonText: 'Спасибо!',
+				confirmButtonClass: 'btn btn-primary font-weight-bold'
+			});
+			});
+		</script>
 	</body>
 	<!--end::Body-->
 </html>
